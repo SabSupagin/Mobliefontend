@@ -23,11 +23,13 @@
             <label for="exampleInputPassword1">สต็อก(จำนวน)</label>
             <input type="Text" class="form-control" v-model="product.stock" required>
         </div>
-        <fieldset id="thumbnail">
-        <label class="form-control-label" >รูป</label>
-        <input type="file" name="image1"  required="required"/>
-        <br>
-        </fieldset>
+        <div class="form-group">
+            <label for="exampleInputPassword1">ลิ้งรูปภาพ</label>
+            <input type="Text" class="form-control" v-model="product.img" >
+            <center>
+            <img :src="product.img" style="width: 20%;">
+            </center>
+        </div>
         <center>
         <div class="clearfix">
         <router-link to="/stock"><button class="btn btn-danger" style="margin-right: 10%">Back</button></router-link>
@@ -47,7 +49,8 @@ export default {
                detail: '',
                type: '',
                price: '',
-               stock: ''
+               stock: '',
+               img: ''
             },
             selectedFile: null
         }
@@ -63,7 +66,8 @@ export default {
                     detail: '',
                     type: '',
                     price: '',
-                    stock: ''
+                    stock: '',
+                    img: ''
                 }
             }).catch(error => {
                 console.log(error)
