@@ -33,7 +33,7 @@ export default {
           username: '',
           history: {
                username: '',
-               history: 'ออกจากระบบ',
+               history: 'เข้าสู่ระบบ',
                date: Date()
             },
         }
