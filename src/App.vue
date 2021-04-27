@@ -25,38 +25,19 @@
   </div>
 </template>
 <script>
-import axios from 'axios';
 
 export default {
     data(){
         return{
           username: '',
-          history: {
-               username: '',
-               history: 'เข้าสู่ระบบ',
-               date: Date()
-            },
         }
     },
     methods: {
         login(){
           this.username = 'user'
-          console.log(this.username)
         },
         logout(){
           this.username = ''
-          let apiURL = 'http://mobliebackend.app.ruk-com.cloud/api/create-history';
-
-                    axios.post(apiURL, this.history).then(() => {
-                        this.$router.push('/');
-                        this.history = {
-                            username: '',
-                            history: 'ออกจากระบบ',
-                            date: Date()
-                        }
-                        }).catch(error => {
-                            console.log(error)
-                        })
         }
     }
 }
