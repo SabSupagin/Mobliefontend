@@ -37,7 +37,7 @@ export default {
         }
     },
     created(){
-        let apiURL = 'http://localhost:4000/api/show-stock';
+        let apiURL = 'http://mobliebackend.app.ruk-com.cloud/api/show-stock';
         axios.get(apiURL).then(res => {
             this.products = res.data
         }).catch(error => {

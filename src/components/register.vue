@@ -39,7 +39,7 @@ export default {
     },
     methods: {
         handleSubmitForm(){
-            let apiURL = 'http://localhost:4000/api/create-user';
+            let apiURL = 'http://mobliebackend.app.ruk-com.cloud/api/create-user';
 
             axios.post(apiURL, this.users).then(() => {
                 this.$router.push('/login');

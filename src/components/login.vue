@@ -34,7 +34,7 @@ export default {
         }
     },
     created(){
-        let apiURL = 'http://localhost:4000/api/show-user';
+        let apiURL = 'http://mobliebackend.app.ruk-com.cloud/api/show-user';
         axios.get(apiURL).then(res => {
             this.userpass = res.data
         }).catch(error => {
@@ -45,7 +45,7 @@ export default {
         checklogin(user,pass){
             for(let i = 0;i <= this.userpass.length;i++){
                 if(pass == this.userpass[i].password && user == this.userpass[i].username){
-                    let apiURL = 'http://localhost:4000/api/create-history';
+                    let apiURL = 'http://mobliebackend.app.ruk-com.cloud/api/create-history';
 
                     axios.post(apiURL, this.history).then(() => {
                         this.$router.push('/');

@@ -57,7 +57,7 @@ export default {
     },
     methods: {
         handleSubmitForm(){
-            let apiURL = 'http://localhost:4000/api/create-product';
+            let apiURL = 'http://mobliebackend.app.ruk-com.cloud/api/create-product';
 
             axios.post(apiURL, this.product).then(() => {
                 this.$router.push('/stock');

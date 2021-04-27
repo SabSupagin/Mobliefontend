@@ -31,7 +31,7 @@ export default {
         }
     },
     created(){
-        let apiURL = 'http://localhost:4000/api/show-history';
+        let apiURL = 'http://mobliebackend.app.ruk-com.cloud/api/show-history';
         axios.get(apiURL).then(res => {
             this.historys = res.data
         }).catch(error => {

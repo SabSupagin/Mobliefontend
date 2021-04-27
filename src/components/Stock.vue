@@ -42,7 +42,7 @@ export default {
         }
     },
     created(){
-        let apiURL = 'http://localhost:4000/api/show-stock';
+        let apiURL = 'http://mobliebackend.app.ruk-com.cloud/api/show-stock';
         axios.get(apiURL).then(res => {
             this.products = res.data
         }).catch(error => {
@@ -51,7 +51,7 @@ export default {
     },
     methods: {
         deleteProduct(id){
-            let apiURL = `http://localhost:4000/api/delete-product/${id}`;
+            let apiURL = `http://mobliebackend.app.ruk-com.cloud/api/delete-product/${id}`;
             let indexOfArrayItem = this.products.findIndex(i => i._id === id);
 
             if(window.confirm('ต้องการลบข้อมูลใช่ไหม')) {

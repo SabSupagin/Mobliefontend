@@ -37,7 +37,7 @@ export default {
         }
     },
     created(){
-        let apiURL = 'http://localhost:4000/api/show-stock';
+        let apiURL = 'http://mobliebackend.app.ruk-com.cloud/api/show-stock';
         axios.get(apiURL).then(res => {
             this.products = res.data
         }).catch(error => {
@@ -45,7 +45,7 @@ export default {
         })
 
         
-        let apiURL2 = 'http://localhost:4000/api/show-history';
+        let apiURL2 = 'http://mobliebackend.app.ruk-com.cloud/api/show-history';
         axios.get(apiURL2).then(res => {
             this.historys = res.data
         }).catch(error => {

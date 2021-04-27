@@ -45,7 +45,7 @@ export default {
         },
         logout(){
           this.username = ''
-          let apiURL = 'http://localhost:4000/api/create-history';
+          let apiURL = 'http://mobliebackend.app.ruk-com.cloud/api/create-history';
 
                     axios.post(apiURL, this.history).then(() => {
                         this.$router.push('/');

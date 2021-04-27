@@ -48,14 +48,14 @@ export default {
         }
     },
     created(){
-        let apiURL = `http://localhost:4000/api/edit-product/${this.$route.params.id}`;
+        let apiURL = `http://mobliebackend.app.ruk-com.cloud/api/edit-product/${this.$route.params.id}`;
         axios.get(apiURL).then((res) => {
             this.product = res.data
         })
     },
     methods: { 
         handleUpdateForm(){
-            let apiURL = `http://localhost:4000/api/update-product/${this.$route.params.id}`;
+            let apiURL = `http://mobliebackend.app.ruk-com.cloud/api/update-product/${this.$route.params.id}`;
 
             axios.put(apiURL, this.products).then((res) => {
                 console.log(res);
