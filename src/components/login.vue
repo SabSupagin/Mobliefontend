@@ -13,7 +13,7 @@
         </div>
         <center>
         <div class="clearfix">
-        <router-link to="/register"><button class="btn btn-danger" style="margin-right: 10%">Sign in</button></router-link>
+        <router-link to="/register"><button class="btn btn-danger" style="margin-right: 10%">Signup</button></router-link>
         <button type="submit" class="btn btn-primary" @click.prevent="checklogin(history.username,password)">Login</button>
         </div>
         </center>
